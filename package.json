@@ -1,0 +1,27 @@
+{
+  "name": "tracie",
+  "version": "0.0.2",
+  "description": "Events tracking made simple",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hieunc229/tracie.git"
+  },
+  "keywords": [
+    "event",
+    "tracking",
+    "sqlite"
+  ],
+  "author": "Hieu C. Nguyen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hieunc229/tracie/issues"
+  },
+  "homepage": "https://github.com/hieunc229/tracie#readme",
+  "devDependencies": {
+    "typescript": "^4.1.5"
+  }
+}
