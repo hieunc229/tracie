@@ -2,10 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class TracieClient {
     constructor(props) {
+        this.add = (name, params) => {
+            return this.request("POST", "/", { data: Object.assign({ name }, params) });
+        };
         this._endpoint = props.server;
     }
-    add(name, params) {
-        return this.request("POST", "/", { data: Object.assign({ name }, params) });
+    setEndpoint(path) {
+        this._endpoint = path;
     }
     request(method, path, options) {
         return new Promise((resolve, reject) => {

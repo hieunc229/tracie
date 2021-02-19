@@ -3,6 +3,11 @@ type TracieProps = {
     server: string
 }
 
+export type TracieClientAddFunction = (
+    name: string, 
+    params?: { [name: string]: number | string | Date | boolean }
+) => Promise<any>;
+
 export default class TracieClient {
 
     _endpoint: string;
@@ -11,7 +16,11 @@ export default class TracieClient {
         this._endpoint = props.server;
     }
 
-    add(name: string, params?: { [name: string]: number | string | Date | boolean }): Promise<any> {
+    setEndpoint(path: string) {
+        this._endpoint = path;
+    }
+
+    add: TracieClientAddFunction = (name, params) => {
         return this.request("POST", "/", { data: { name, ...params } })
     }
 

@@ -1,3 +1,7 @@
-import { default as Tracie } from "./TracieClient";
+import TracieClient from "./TracieClient";
 
-export default Tracie
+import "./globalVariable";
+
+export {
+    TracieClient
+}
