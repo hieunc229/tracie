@@ -1,6 +1,6 @@
 {
   "name": "tracie",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Event tracking made simple",
   "main": "dist/index.min.js",
   "module": "build/index.js",

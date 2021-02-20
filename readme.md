@@ -1,37 +1,62 @@
 # Tracie (client)
 
-Tracie is an event tracking library.
+<a href="https://packagephobia.now.sh/result?p=tracie"><img src="https://badgen.net/packagephobia/install/tracie" alt="Current version"></a> <a href="https://www.npmjs.com/package/tracie"><img src="https://img.shields.io/npm/v/tracie" alt="Install size"></a>
 
-## Install and Usage
+Tracie is a self-hosted event tracking service written in NodeJS. This is a client library, used to create events and send them to your hosted server. Supported on either **NodeJS** and **browser** enviroment. _Note: Usage on NodeJS and browser are slightly different_
 
-### Via Browser
+<!-- TOC -->
+- [Install and Usage on Browser](#install-and-usage-on-browser)
+- [Install and Usage on Webpack (ES6, ...)](#install-and-usage-on-webpack-es5-es6)
+<!-- /TOC -->
+
+---
+
+## Install and Usage on Browser
+
+On browser, embed the `tracie` distribution script, and use
+
+### 1. Embed distribution script
 
 ```js
-
 // Add tracie client
 <script src="path/dist/index.min.js" />
 
-// Or using jsdelivr, replace 0.0.3 with current version
-<script src="https://cdn.jsdelivr.net/npm/tracie@latest" />
+// Or using jsdelivr (you can replace `latest` with a version)
+<script src="https://cdn.jsdelivr.net/npm/tracie@latest/dist/index.min.js" />
+```
+### 2. Usage
 
+```js
+
+// Initate connection
 tc.initiate({ server: "{serverpath}" });
+
+// send event
 tc("event_name");
+
+document.onload = function() {
+    tc("hits")
+}
 ```
 
-### Via Webpack (es5, es6, ...)
+---
 
-1. Install `tracie` using `yarn` or `npm`
+## Install and Usage on Webpack (es5, es6, ...)
+
+
+You'll need to install `tracie` and [node-fetch](https://www.npmjs.com/package/node-fetch)
+
+### 1. Install
 
 ```sh
 # using yarn
-$ yarn add tracie
+$ yarn add tracie node-fetch
 
 # using npm
-$ npm install tracie --save
+$ npm install tracie node-fetch --save
 ```
 
-2. Usage
-
+### 2. Usage
 ```js
 
 // Import using require

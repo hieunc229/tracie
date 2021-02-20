@@ -13,7 +13,7 @@ module.exports = {
         }]
     },
     output: {
-        filename: 'tracie.min.js',
+        filename: 'index.min.js',
         path: path.resolve(__dirname, "dist")
     },
     resolve: {

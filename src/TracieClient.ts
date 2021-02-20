@@ -1,3 +1,4 @@
+import request from "./request";
 
 type TracieProps = {
     server: string
@@ -42,7 +43,7 @@ export default class TracieClient {
                 })
             }
 
-            fetch(url, init)
+            request(url, init)
                 .then(rs => {
                     if (rs.status !== 204) {
                         return rs.json()
