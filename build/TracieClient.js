@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 class TracieClient {
     constructor(props) {
         this.add = (name, params) => {
-            return this.request("POST", "/", { data: Object.assign({ name }, params) });
+            return this.request("POST", "", { data: Object.assign({ name }, params) });
         };
         this._endpoint = props.server;
     }
@@ -23,7 +23,12 @@ class TracieClient {
                 });
             }
             fetch(url, init)
-                .then(rs => rs.json())
+                .then(rs => {
+                if (rs.status !== 204) {
+                    return rs.json();
+                }
+                return Promise.resolve({});
+            })
                 .then(resolve)
                 .catch(reject);
         });

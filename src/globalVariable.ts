@@ -1,4 +1,4 @@
-import TracieClient, { TracieClientAddFunction } from "./TracieClient";
+import TracieClient from "./TracieClient";
 
 interface ExtendedPromise<T> extends Promise<T> {
     initiate: (configs: { server: string }) => void
@@ -8,8 +8,7 @@ declare global {
     interface Window { tc: (name: string, params: any) => ExtendedPromise<any>; }
 }
 
-(function (host: Window) {
-
+(function (host) {
     let tracieGlobal = new TracieClient({ server: "" })
 
     let tc: any = (name: string, params: any) => {
@@ -23,5 +22,3 @@ declare global {
     host.tc = tc;
 
 })(window);
-
-export { };

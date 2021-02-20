@@ -21,7 +21,7 @@ export default class TracieClient {
     }
 
     add: TracieClientAddFunction = (name, params) => {
-        return this.request("POST", "/", { data: { name, ...params } })
+        return this.request("POST", "", { data: { name, ...params } })
     }
 
     private request(method: "POST" | "GET" | "PATCH" | "DELETE", path: string, options: {
@@ -43,7 +43,12 @@ export default class TracieClient {
             }
 
             fetch(url, init)
-                .then(rs => rs.json())
+                .then(rs => {
+                    if (rs.status !== 204) {
+                        return rs.json()
+                    }
+                    return Promise.resolve({});
+                })
                 .then(resolve)
                 .catch(reject)
         })

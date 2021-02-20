@@ -1,10 +1,16 @@
 {
   "name": "tracie",
-  "version": "0.0.2",
-  "description": "Events tracking made simple",
-  "main": "dist/index.js",
+  "version": "0.0.4",
+  "description": "Event tracking made simple",
+  "main": "dist/index.min.js",
+  "module": "build/index.js",
+  "unpkg": "dist/index.min.js",
+  "types": "build/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "yarn clean && webpack --config webpack.config.js",
+    "build-browser": "yarn clean && tsc --outDir ./browser --module amd --declaration false --module none",
+    "clean": "rm -fr browser"
   },
   "repository": {
     "type": "git",
@@ -22,6 +28,12 @@
   },
   "homepage": "https://github.com/hieunc229/tracie#readme",
   "devDependencies": {
-    "typescript": "^4.1.5"
+    "browserify": "^17.0.0",
+    "rollup": "^2.39.0",
+    "terser": "^5.6.0",
+    "ts-loader": "^8.0.17",
+    "typescript": "^4.1.5",
+    "webpack": "^5.23.0",
+    "webpack-cli": "^4.5.0"
   }
 }

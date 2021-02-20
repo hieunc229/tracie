@@ -2,25 +2,48 @@
 
 Tracie is an event tracking library.
 
-## 1. Install
+## Install and Usage
 
-```sh
-$ yarn add tracie
-```
+### Via Browser
 
 ```js
 
-// Browser
-<script src="path/tracie.min.js" />
+// Add tracie client
+<script src="path/dist/index.min.js" />
 
-// ES6 import
+// Or using jsdelivr, replace 0.0.3 with current version
+<script src="https://cdn.jsdelivr.net/npm/tracie@latest" />
+
+tc.initiate({ server: "{serverpath}" });
+tc("event_name");
+```
+
+### Via Webpack (es5, es6, ...)
+
+1. Install `tracie` using `yarn` or `npm`
+
+```sh
+# using yarn
+$ yarn add tracie
+
+# using npm
+$ npm install tracie --save
+```
+
+2. Usage
+
+```js
+
+// Import using require
+const Tracie = require("tracie");
+
+// Or import in ES6
 import Tracie from "tracie";
 
-Tracie.init({
-    server: "/endpoint"
+const tc = new Tracie({
+    server: "{serverpath}"
 })
 
 // Add an event
-Tracie.add("signup", { params });
-
+tc.add("event_name");
 ```
