@@ -1,3 +1,5 @@
+<img src="docs/tracie.svg" height="60" alt="Node Fetch"/>
+
 # Tracie (client)
 
 <a href="https://packagephobia.now.sh/result?p=tracie"><img src="https://badgen.net/packagephobia/install/tracie" alt="Current version"></a> <a href="https://www.npmjs.com/package/tracie"><img src="https://img.shields.io/npm/v/tracie" alt="Install size"></a>
@@ -6,10 +8,8 @@ Tracie is a self-hosted event tracking service written in NodeJS. This is a clie
 
 <!-- TOC -->
 - [Install and Usage on Browser](#install-and-usage-on-browser)
-- [Install and Usage on Webpack (ES6, ...)](#install-and-usage-on-webpack-es5-es6)
+- [Install and Usage on Webpack (ES6, ...)](#install-and-usage-on-webpack-es5-es6-)
 <!-- /TOC -->
-
----
 
 ## Install and Usage on Browser
 
@@ -38,8 +38,6 @@ document.onload = function() {
     tc("hits")
 }
 ```
-
----
 
 ## Install and Usage on Webpack (es5, es6, ...)
 
