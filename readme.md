@@ -6,10 +6,15 @@
 
 Tracie is a self-hosted event tracking service written in NodeJS. This is a client library, used to create events and send them to your hosted server. Supported on either **NodeJS** and **browser** enviroment. _Note: Usage on NodeJS and browser are slightly different_
 
+
 <!-- TOC -->
 - [Install and Usage on Browser](#install-and-usage-on-browser)
 - [Install and Usage on Webpack (ES6, ...)](#install-and-usage-on-webpack-es5-es6-)
 <!-- /TOC -->
+
+![](docs/tracie-sample.png)
+
+---
 
 ## Install and Usage on Browser
 
