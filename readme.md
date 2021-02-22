@@ -4,13 +4,15 @@
 
 <a href="https://packagephobia.now.sh/result?p=tracie"><img src="https://badgen.net/packagephobia/install/tracie" alt="Current version"></a> <a href="https://www.npmjs.com/package/tracie"><img src="https://img.shields.io/npm/v/tracie" alt="Install size"></a>
 
-Tracie is a self-hosted event tracking service written in NodeJS. This is a client library, used to create events and send them to your hosted server. Supported on either **NodeJS** and **browser** enviroment. _Note: Usage on NodeJS and browser are slightly different_
+Tracie is a minimal, self-hosted event tracking service. This is a client library, used to create events and send them to your hosted server. Supported on either **NodeJS** and **browser** enviroment. _Note: Usage on NodeJS and browser are slightly different_
 
 
 <!-- TOC -->
 - [Install and Usage on Browser](#install-and-usage-on-browser)
 - [Install and Usage on Webpack (ES6, ...)](#install-and-usage-on-webpack-es5-es6-)
 <!-- /TOC -->
+
+_Note: You will need to setup [tracie-server](https://github.com/hieunc229/tracie-server) to store and query events data_
 
 ![](docs/tracie-demo.gif)
 
